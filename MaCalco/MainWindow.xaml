@@ -1,0 +1,371 @@
+﻿<Window
+    x:Class="MaCalco.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MaCalco"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Calculatrice"
+    Width="404"
+    Height="700"
+    mc:Ignorable="d">
+    <Grid Margin="0,0,0,0">
+
+        <Grid.RowDefinitions>
+            <!--  ici cest pour le haut des boutons de la calco  -->
+            <RowDefinition Height="70" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="65" />
+            <RowDefinition Height="68" />
+
+            <!--<RowDefinition Height="90"/>-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+
+
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            x:Name="montexte"
+            Grid.Row="0"
+            Grid.Column="1"
+            Grid.ColumnSpan="5"
+            Width="Auto"
+            VerticalAlignment="Center"
+            FontSize="30"
+            Text="Standart" />
+
+        <TextBlock
+            x:Name="sortiechiffre"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Margin="1"
+            VerticalAlignment="Bottom"
+            FontSize="50"
+            Text="{Binding output}"
+            TextAlignment="Right" />
+
+        <TextBlock
+            x:Name="sortiechiffre1"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Margin="0,0,0,0"
+            VerticalAlignment="Top"
+            FontSize="15"
+            Text=""
+            TextAlignment="Right" />
+        <Image
+            x:Name="Barre"
+            Width="24"
+            Height="15"
+            Margin="1"
+            Source="https://cdn4.iconfinder.com/data/icons/mathematical-symbols/44/Equivalence-512.png" />
+
+
+        <Image
+            x:Name="clock"
+            Grid.Column="3"
+            Width="40"
+            Height="35"
+            Source="https://www.shutterstock.com/shutterstock/photos/719635834/display_1500/stock-vector-vector-fall-backward-icon-change-time-adjust-time-set-time-719635834.jpg" />
+
+
+        <Button
+            x:Name="Sept"
+            Grid.Row="6"
+            Grid.Column="0"
+            Click="B_Click"
+            Content="7"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Huit"
+            Grid.Row="6"
+            Grid.Column="1"
+            Click="B_Click"
+            Content="8"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Neuf"
+            Grid.Row="6"
+            Grid.Column="2"
+            Click="B_Click"
+            Content="9"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Quatre"
+            Grid.Row="7"
+            Grid.Column="0"
+            Click="B_Click"
+            Content="4"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Cinq"
+            Grid.Row="7"
+            Grid.Column="1"
+            Click="B_Click"
+            Content="5"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Six"
+            Grid.Row="7"
+            Grid.Column="2"
+            Click="B_Click"
+            Content="6"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Un"
+            Grid.Row="8"
+            Grid.Column="0"
+            Click="B_Click"
+            Content="1"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Deux"
+            Grid.Row="8"
+            Grid.Column="1"
+            Click="B_Click"
+            Content="2"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Trois"
+            Grid.Row="8"
+            Grid.Column="2"
+            Click="B_Click"
+            Content="3"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Zero"
+            Grid.Row="9"
+            Grid.Column="1"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="0"
+            FontSize="25"
+            FontWeight="Bold" />
+        <!--  signe pour operation  -->
+        <Button
+            x:Name="Btnplus"
+            Grid.Row="8"
+            Grid.Column="4"
+            Click="B_Click"
+            Content="+"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Btnegal"
+            Grid.Row="9"
+            Grid.Column="4"
+            Background="Aqua"
+            Click="B_Click"
+            Content="="
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Btnmoins"
+            Grid.Row="7"
+            Grid.Column="4"
+            Click="B_Click"
+            Content="-"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Btnmulti"
+            Grid.Row="6"
+            Grid.Column="4"
+            Click="B_Click"
+            Content="x"
+            FontSize="20" />
+
+        <Button
+            x:Name="Btndivise"
+            Grid.Row="5"
+            Grid.Column="4"
+            Click="B_Click"
+            Content="÷"
+            FontSize="25"
+            FontWeight="Bold" />
+        <!--  ici ce sont les boutons essentiel a l'exercice 2  -->
+
+        <Button
+            x:Name="BtnC"
+            Grid.Row="4"
+            Grid.Column="2"
+            Margin="0,0,0,0"
+            Click="Bsup_Click"
+            Content="C"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+        <Button
+            x:Name="Btnmodulo"
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="%"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+        <!--  je modifie le bouton x^2 par 10^x  -->
+        <Button
+            x:Name="Btnexpo"
+            Grid.Row="5"
+            Grid.Column="1"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="10^x"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+        <!--  je modifie le bouton 1/x par |x|  -->
+        <Button
+            x:Name="Btnabsolu"
+            Grid.Row="5"
+            Grid.Column="0"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="|x|"
+            FontSize="25"
+            FontWeight="SemiBold" />
+        <!--  Ici fin de la partie 2  -->
+
+        <!--  ici c'est les log  et parenthese  -->
+
+
+        <Button
+            x:Name="Btncarre"
+            Grid.Row="5"
+            Grid.Column="2"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="Sqrt"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+
+
+        <Button
+            x:Name="BtnDel"
+            Grid.Row="4"
+            Grid.Column="3"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="DEL"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+
+        <Button
+            x:Name="MC"
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="MC"
+            FontSize="25"
+            FontWeight="Light"
+            Opacity="0.5" />
+        <Button
+            x:Name="MR"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="MR"
+            FontSize="25"
+            FontWeight="Light"
+            Opacity="0.5" />
+
+
+        <Button
+            x:Name="M1"
+            Grid.Row="3"
+            Grid.Column="2"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="M+"
+            FontSize="25"
+            FontWeight="Bold"
+            Opacity="0.8" />
+
+        <Button
+            x:Name="M2"
+            Grid.Row="3"
+            Grid.Column="3"
+            Margin="0,0,0,0"
+            Click="B_Click"
+            Content="M-"
+            FontSize="25"
+            FontWeight="Bold"
+            Opacity="0.8" />
+
+
+        <Button
+            x:Name="Btnvirgule"
+            Grid.Row="9"
+            Grid.Column="2"
+            Margin="0,0,0,0"
+            Click="Bvirgule_Click"
+            Content=","
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="BtnpOUm"
+            Grid.Row="9"
+            Grid.Column="0"
+            Margin="0,0,0,0"
+            Click="Bsigne_Click"
+            Content="+/-"
+            FontSize="25"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="Btnsup"
+            Grid.Row="4"
+            Grid.Column="1"
+            Click="B_Click"
+            Content="CE"
+            FontSize="25"
+            FontWeight="SemiBold" />
+
+
+
+
+
+    </Grid>
+</Window>
